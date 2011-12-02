@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'nokogiri'
+  s.add_dependency 'ruby-hmac'
 
   s.add_development_dependency "rspec"
 end
