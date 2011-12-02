@@ -20,7 +20,7 @@ Given a UPC returns a product object that gets populated calling fetch. The Code
  ```ruby
  require 'emporium'
 
- product = Emporium::Product.new("066661234567")
+ product = Emporium::Product.new "066661234567"
  product.fetch!
  ```
 
