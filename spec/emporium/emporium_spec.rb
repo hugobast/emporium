@@ -11,6 +11,10 @@ describe Product do
     it "fails to create an instance if no upc is given" do
       lambda { Product.new() }.should raise_error
     end
+    
+    it "fails to create an instance if invalid upc is given" do
+      lambda { Product.new("036000241452") }.should raise_error
+    end
   end
 end
 
@@ -22,7 +26,7 @@ describe Code do
     end
     
     it "returns false for an invalid UPC" do
-      code = Code.new("012345678999")
+      code = Code.new("036000241452")
       code.valid?.should_not be true
     end
   end
