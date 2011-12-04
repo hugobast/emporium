@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Emporium::VERSION
   s.authors     = ["Hugo Bastien"]
   s.email       = ["hugobast@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "https://github.com/hugobast/emporium"
+  s.summary     = %q{Emporium fetches information about a product from it's UPC}
+  s.description = %q{Early release, only uses amazon product advertising API }
 
   s.rubyforge_project = "emporium"
 
