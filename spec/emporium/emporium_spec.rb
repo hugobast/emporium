@@ -1,6 +1,18 @@
 require 'spec_helper'
 
 describe Product do
+  before(:each) do
+    Product.service = :amazon
+    Product.service_url = "http://webservices.amazon.com/onca/xml"
+    Product.access_key = CONFIG["access_key"]
+    Product.associate_tag = CONFIG["associate_tag"]
+    Product.secret = CONFIG["secret"]
+  end
+
+  it "uses the amazon service" do
+    Product.service.should be :amazon
+  end
+
   describe "#new" do
     it "creates an instance from a upc" do
       product = Product.new("036000241457")
@@ -22,22 +34,15 @@ describe Product do
   end
 
   describe "#fetch!" do
-    product = Product.new("610839331574", access_key: CONFIG["access_key"], 
-                                            associate_tag: CONFIG["associate_tag"], 
-                                            secret: CONFIG["secret"])
-    product.use :amazon
+    product = Product.new("610839331574")
 
     it "should fetch product information" do
-      product = Product.new("610839331574", access_key: CONFIG["access_key"], 
-                                            associate_tag: CONFIG["associate_tag"], 
-                                            secret: CONFIG["secret"])
-      product.use :amazon
       lambda { product.fetch! }.should_not raise_error
     end
 
     it "should create attributes for the product" do
       product.fetch!
-      product.manufacturer.should match 'Asus'
+      product.brand.should match 'Asus'
     end
 
   end

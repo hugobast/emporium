@@ -9,26 +9,42 @@ module Emporium
     end
     
     def fetch!
-      if @service && @service == :amazon
-        create ::Nokogiri::XML(open("http://webservices.amazon.com/onca/xml?#{signed_query}"))
+      if @@service == :amazon
+        create ::Nokogiri::XML(open("#{@@service_url}?#{signed_query}"))
       end
     end
 
-    def use(service)
-      @service = service
+    def self.class_option(*symbols)
+      symbols.each do |symbol|
+        class_eval(<<-EOS)
+          def self.#{symbol}
+            @@#{symbol}
+          end
+
+          def self.#{symbol}=(value)
+            @@#{symbol} = value
+          end
+        EOS
+      end
+    end
+
+    class_option :access_key, :secret, :associate_tag
+    class_option :service, :service_url
+
+    def method_missing(name, *args)
+      if self.instance_variables.include? :"@#{name}"
+        self.instance_variable_get("@#{name}")
+      else
+        super
+      end
     end
     
   private
 
     def create(result)
-      if @service == :amazon
+      if @@service == :amazon
         result.search("ItemAttributes").children.each do |value|
           self.instance_variable_set("@#{value.name.downcase}",  value.content)
-          self.class.class_eval do
-            define_method("#{value.name.downcase}") do
-              value.content
-            end
-          end
         end
       end
     end
@@ -42,9 +58,9 @@ module Emporium
         "SearchIndex" => @options[:search_index] || "All",
         "ResponseGroup" => @options[:response_group] || "Medium",
         "Version" => @options[:version] || "2011-08-01",
-        "AssociateTag" => @options[:associate_tag],
+        "AssociateTag" => @@associate_tag,
         "Timestamp" => Time.now.iso8601,
-        "AWSAccessKeyId" => @options[:access_key]
+        "AWSAccessKeyId" => @@access_key
       }
     end
 
@@ -53,7 +69,7 @@ module Emporium
     end
 
     def signed_query
-      digest = HMAC::SHA256.digest(@options[:secret], request)
+      digest = HMAC::SHA256.digest(@@secret, request)
       signature = Base64.encode64(digest).chomp
       to_query(params.merge "Signature" => signature)
     end
