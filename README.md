@@ -21,6 +21,7 @@ Given a UPC returns a product object that gets populated calling fetch. The Code
  require 'emporium'
 
  product = Emporium::Product.new "066661234567"
+ product.use :amazon
  product.fetch!
  ```
 

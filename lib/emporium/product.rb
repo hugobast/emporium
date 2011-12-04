@@ -8,9 +8,9 @@ module Emporium
       @options = options.merge! code: @code.value
     end
     
-    def fetch
+    def fetch!
       if @service && @service == :amazon
-        ::Nokogiri::XML(open("http://webservices.amazon.com/onca/xml?#{signed_query}"))
+        create ::Nokogiri::XML(open("http://webservices.amazon.com/onca/xml?#{signed_query}"))
       end
     end
 
@@ -19,6 +19,19 @@ module Emporium
     end
     
   private
+
+    def create(result)
+      if @service == :amazon
+        result.search("ItemAttributes").children.each do |value|
+          self.instance_variable_set("@#{value.name.downcase}",  value.content)
+          self.class.class_eval do
+            define_method("#{value.name.downcase}") do
+              value.content
+            end
+          end
+        end
+      end
+    end
   
     def params
       {
