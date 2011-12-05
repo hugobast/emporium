@@ -12,19 +12,29 @@ Add to your Gemfile and run the `bundle` command to install it.
 
 **Requires Ruby 1.9.2 or later.**
 
+## Configuration
+
+ ```ruby
+ Product.configuration do |config|
+   config.service = :amazon
+   # ...
+ end
+ ```
+
 
 ## Usage
 
-Given a UPC returns a product object that gets populated calling fetch. The Code class takes UPC-A or EAN digits
+Give it a UPC to fetch a product object. The Code only takes UPC-A digits
 
  ```ruby
  require 'emporium'
 
  product = Emporium::Product.new "066661234567"
- product.use :amazon
  product.fetch!
  ```
 
+
+
 ## Development
 
-This gem is created by Hugo Bastien and is under the MIT License.
+This gem is under the MIT License.

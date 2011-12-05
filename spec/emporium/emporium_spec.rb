@@ -2,11 +2,13 @@ require 'spec_helper'
 
 describe Product do
   before(:each) do
-    Product.service = :amazon
-    Product.service_url = "http://webservices.amazon.com/onca/xml"
-    Product.access_key = CONFIG["access_key"]
-    Product.associate_tag = CONFIG["associate_tag"]
-    Product.secret = CONFIG["secret"]
+    Product.configuration do |config|
+      config.service = :amazon
+      config.service_url = "http://webservices.amazon.com/onca/xml"
+      config.access_key = CONFIG["access_key"]
+      config.associate_tag = CONFIG["associate_tag"]
+      config.secret = CONFIG["secret"]
+    end
   end
 
   it "uses the amazon service" do

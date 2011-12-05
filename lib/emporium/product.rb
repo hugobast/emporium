@@ -14,6 +14,10 @@ module Emporium
       end
     end
 
+    def self.configuration
+      yield self
+    end
+
     def self.class_option(*symbols)
       symbols.each do |symbol|
         class_eval(<<-EOS)
