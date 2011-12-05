@@ -12,8 +12,9 @@ module Emporium
       create @service.response
     end
 
-    def use(service)
-      @service = service.new(code: @code.value)
+    def use(service, options={})
+      options.merge!(code: @code.value)
+      @service = service.new(options)
     end
 
     def method_missing(name, *args)
@@ -25,9 +26,9 @@ module Emporium
     end
     
   private
-    def create(response)
-      response.search("ItemAttributes").children.each do |value|
-        self.instance_variable_set("@#{value.name.downcase}",  value.content)
+    def create(hash)
+      hash.each do |key, value|
+        self.instance_variable_set("@#{key.to_s}",  value)
       end
     end
   end

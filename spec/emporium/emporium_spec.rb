@@ -57,7 +57,7 @@ describe Emporium::Services::Amazon do
   describe "#response" do
     it "should return an XML document" do
       service = Emporium::Services::Amazon.new(code: "610839331574")
-      service.response.should be_a_kind_of ::Nokogiri::XML::Document
+      service.response.should be_an_instance_of Hash
     end
 
     it "should raise an error if nothing is found" do

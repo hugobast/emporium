@@ -9,10 +9,20 @@ module Emporium
         res = ::Nokogiri::XML(open("http://webservices.amazon.com/onca/xml?#{signed_query}"))
         message = res.search('Message')
         raise message.children.first.content unless message.empty?
-        res
+        hash_from_xml(res.search('ItemAttributes'))
       end
 
     private
+
+      def hash_from_xml(node)
+        # Only the first level elements for now
+        result_hash = {}
+        node.children.each do |value|
+          result_hash[value.name.downcase.to_sym] = value.content
+        end
+        result_hash
+      end
+
       def params
         {
           "Service" => "AWSECommerceService",

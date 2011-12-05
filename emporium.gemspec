@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'nokogiri'
   s.add_dependency 'ruby-hmac'
+  s.add_dependency 'json'
 
   s.add_development_dependency "rspec"
 end
