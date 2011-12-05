@@ -17,7 +17,7 @@ module Emporium
         {
           "Service" => "AWSECommerceService",
           "Operation" => "ItemLookup",
-          "IdType" => "UPC",
+          "IdType" => @options[:type] || "UPC",
           "ItemId" => @options[:code],
           "SearchIndex" => @options[:search_index] || "All",
           "ResponseGroup" => @options[:response_group] || "Medium",
