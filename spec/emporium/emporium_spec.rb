@@ -6,6 +6,11 @@ Emporium::Services::Amazon.configuration do |config|
   config.secret = AMAZON["secret"]
 end
 
+Emporium::Services::Google.configuration do |config|
+  config.access_key = GOOGLE["access_key"]
+  config.cse = GOOGLE["cse"]
+end
+
 describe Emporium::Product do
   describe "#new" do
     it "fails to create an instance if no upc is given" do

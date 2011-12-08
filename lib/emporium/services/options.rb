@@ -11,7 +11,7 @@ module Emporium
           yield self
         end
 
-        def class_option(*symbols)
+        def service_attr_accessor(*symbols)
           symbols.each do |symbol|
             class_eval(<<-EOS)
               def self.#{symbol}
