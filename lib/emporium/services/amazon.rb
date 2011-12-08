@@ -40,16 +40,16 @@ module Emporium
 
       def params
         {
-          "Service" => "AWSECommerceService",
-          "Operation" => "ItemLookup",
-          "IdType" => @options[:type] || "UPC",
-          "ItemId" => @options[:code],
-          "SearchIndex" => @options[:search_index] || "All",
-          "ResponseGroup" => @options[:response_group] || "Medium",
-          "Version" => @options[:version] || "2011-08-01",
-          "AssociateTag" => @@associate_tag,
-          "Timestamp" => Time.now.iso8601,
-          "AWSAccessKeyId" => @@access_key
+          'Service'         => 'AWSECommerceService',
+          'Operation'       => 'ItemLookup',
+          'IdType'          => @options[:type]            || 'UPC',
+          'ItemId'          => @options[:code],
+          'SearchIndex'     => @options[:search_index]    || 'All',
+          'ResponseGroup'   => @options[:response_group]  || 'Medium',
+          'Version'         => @options[:version]         || '2011-08-01',
+          'AssociateTag'    => @@associate_tag,
+          'Timestamp'       => Time.now.iso8601,
+          'AWSAccessKeyId'  => @@access_key
         }
       end
     end

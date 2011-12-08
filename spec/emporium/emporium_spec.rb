@@ -61,7 +61,9 @@ describe Emporium::Services::Amazon do
     end
 
     it "should raise an error if nothing is found" do
-      lambda { Emporium::Services::Amazon.new(code: "036000241452").response }.should raise_error
+      lambda {
+        Emporium::Services::Amazon.new(code: "036000241452").response
+      }.should raise_error
     end
   end
 end
@@ -82,6 +84,9 @@ describe Emporium::Services::Google do
     end
 
     it "should return an error if nothing is found" do
+      lambda {
+        service = Emporium::Services::Google.new(code: "ASjh@89a2$").response
+      }.should raise_error
     end
   end
 end

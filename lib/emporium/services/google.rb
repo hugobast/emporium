@@ -11,22 +11,34 @@ module Emporium
       end
 
       def response
-        return JSON.parse("{ \"some\": \"json\" }")
+        attributes
       end
 
     private
-      
+      include Emporium::Services::Utilities
 
-      def params
-
+      def attributes
+        response = open(request)
+        hash = hash_from_json(response.read)
+        raise message unless hash["totalItems"] > 0
+        hash["items"][0]["product"]
       end
 
-      def query
-        
+      def message
+        "q=#{@options[:code]} generated no results"
       end
 
       def request
-        "https://www.googleapis.com/shopping/search/v1/public/products?#{query}"
+        "https://www.googleapis.com/shopping/search/v1/public/products?#{query(params)}"
+      end
+
+      def params
+        {
+          'q'       => @options[:code],
+          'alt'     => @options[:alt]     || 'json',
+          'country' => @options[:country] || 'US',
+          'key'     => @@access_key
+        }
       end
     end
   end

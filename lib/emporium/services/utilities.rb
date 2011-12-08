@@ -12,6 +12,7 @@ module Emporium
       end
 
       def hash_from_json(json)
+        JSON.parse(json)
       end
 
       def query(hash)
