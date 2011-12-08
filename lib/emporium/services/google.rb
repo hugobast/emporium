@@ -4,6 +4,8 @@ module Emporium
   module Services
     class Google
       include Emporium::Services::Options
+      include Emporium::Services::Utilities
+
       service_attr_accessor :access_key, :cse
 
       def initialize(options={})
@@ -15,8 +17,6 @@ module Emporium
       end
 
     private
-      include Emporium::Services::Utilities
-
       def attributes
         response = open(request)
         hash = hash_from_json(response.read)

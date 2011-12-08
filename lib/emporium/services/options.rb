@@ -12,15 +12,15 @@ module Emporium
           self
         end
 
-        def service_attr_accessor(*symbols)
-          symbols.each do |symbol|
+        def service_attr_accessor(*attributes)
+          attributes.each do |attribute|
             class_eval(<<-EOS)
-              def self.#{symbol}
-                @@#{symbol}
+              def self.#{attribute}
+                @@#{attribute}
               end
 
-              def self.#{symbol}=(value)
-                @@#{symbol} = value
+              def self.#{attribute}=(value)
+                @@#{attribute} = value
               end
             EOS
           end

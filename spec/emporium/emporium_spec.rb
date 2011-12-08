@@ -63,6 +63,10 @@ describe Emporium::Product do
 end
 
 describe Emporium::Services::Amazon do
+  it "should not modify every classes" do
+    Class.methods.should_not include :access_key
+  end
+
   describe "#new" do
     it "should initialize with options" do
       options = { some: "option" }

@@ -7,6 +7,7 @@ module Emporium
   module Services
     class Amazon
       include Emporium::Services::Options
+      include Emporium::Services::Utilities
 
       service_attr_accessor :access_key, :secret, :associate_tag
 
@@ -19,8 +20,6 @@ module Emporium
       end
 
     private
-      include Emporium::Services::Utilities
-
       def attributes
         response = ::Nokogiri::XML(open("http://webservices.amazon.com/onca/xml?#{signed_query}"))
         message = response.search('Message')
