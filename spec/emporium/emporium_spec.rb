@@ -24,16 +24,33 @@ describe Emporium::Product do
 
   describe "#fetch!" do
     product = Emporium::Product.new("610839331574")
-    product.use Emporium::Services::Amazon
 
-    it "should fetch product information" do
-      lambda { product.fetch! }.should_not raise_error
+    describe "using the amazon service" do
+      product.use Emporium::Services::Amazon
+
+      it "should fetch product information" do
+        lambda { product.fetch! }.should_not raise_error
+      end
+
+      it "should create attributes for the product" do
+        product.fetch!
+        product.brand.downcase.should match 'asus'
+      end
     end
 
-    it "should create attributes for the product" do
-      product.fetch!
-      product.brand.should match 'Asus'
+    describe "using the google service" do
+      product.use Emporium::Services::Google
+      
+      it "should fetch product information" do
+        lambda { product.fetch! }.should_not raise_error
+      end
+
+      it "should create attributes for the product" do
+        product.fetch!
+        product.brand.downcase.should match 'asus'
+      end
     end
+
   end
 
   describe "#use" do
