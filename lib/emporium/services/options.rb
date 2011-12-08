@@ -9,6 +9,7 @@ module Emporium
       module ClassMethods
         def configuration
           yield self
+          self
         end
 
         def service_attr_accessor(*symbols)
