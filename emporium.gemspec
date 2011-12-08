@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Hugo Bastien"]
   s.email       = ["hugobast@gmail.com"]
   s.homepage    = "https://github.com/hugobast/emporium"
-  s.summary     = %q{Emporium fetches information about a product from it's UPC}
-  s.description = %q{Early release, only uses amazon product advertising API }
+  s.summary     = %q{Emporium fetches information about a product from it's UPC (GTIN-12)}
+  s.description = %q{Uses Amazon's product advertising API or Google's Shopping Search API}
 
   s.rubyforge_project = "emporium"
 
