@@ -26,7 +26,7 @@ describe Emporium::Product do
     product = Emporium::Product.new("610839331574")
 
     describe "using the amazon service" do
-      product.use Emporium::Services::Amazon
+      product.service = :amazon
 
       it "should fetch product information" do
         lambda { product.fetch! }.should_not raise_error
@@ -39,7 +39,7 @@ describe Emporium::Product do
     end
 
     describe "using the google service" do
-      product.use Emporium::Services::Google
+      product.service = :google
       
       it "should fetch product information" do
         lambda { product.fetch! }.should_not raise_error
@@ -53,10 +53,10 @@ describe Emporium::Product do
 
   end
 
-  describe "#use" do
+  describe "#service=" do
     it "tells a product what service to use" do
       product = Emporium::Product.new("610839331574")
-      product.use Emporium::Services::Amazon
+      product.service = :amazon
       product.service.should be_an_instance_of Emporium::Services::Amazon
     end
   end

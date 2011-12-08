@@ -13,9 +13,9 @@ module Emporium
       create @service.response
     end
 
-    def use(service, options={})
-      options.merge!(code: @code.value)
-      @service = service.new(options)
+    def service=(service, options={})
+      klass = Emporium::Services.const_get("#{service.capitalize.to_s}")
+      @service = klass.new(options.merge!(code: @code.value))
     end
     
   private
