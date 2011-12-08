@@ -10,6 +10,11 @@ module Emporium
       def response
         return JSON.parse("{ \"some\": \"json\" }")
       end
+
+    private
+      def params
+
+      end
     end
   end
 end

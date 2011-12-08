@@ -6,6 +6,10 @@ require 'nokogiri'
 module Emporium
   module Services
     class Amazon
+      include Emporium::Services::Options
+
+      class_option :access_key, :secret, :associate_tag
+
       def initialize(options={})
         @options = options
       end
@@ -60,28 +64,6 @@ module Emporium
       def request
         "GET\nwebservices.amazon.com\n/onca/xml\n#{to_query(params)}"
       end
-      class << self
-
-        def configuration
-          yield self
-        end
-
-        def class_option(*symbols)
-          symbols.each do |symbol|
-            class_eval(<<-EOS)
-              def self.#{symbol}
-                @@#{symbol}
-              end
-
-              def self.#{symbol}=(value)
-                @@#{symbol} = value
-              end
-            EOS
-          end
-        end
-      end
-
-      class_option :access_key, :secret, :associate_tag
     end
   end
 end

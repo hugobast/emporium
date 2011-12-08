@@ -1,3 +1,4 @@
+require 'emporium/services/options'
 require 'emporium/services/amazon'
 require 'emporium/services/google'
 
