@@ -9,6 +9,7 @@ module Emporium
     end
     
     def fetch!
+      @service.response
       create @service.response
     end
 
@@ -16,19 +17,19 @@ module Emporium
       options.merge!(code: @code.value)
       @service = service.new(options)
     end
-
-    def method_missing(name, *args)
-      if self.instance_variables.include? :"@#{name}"
-        self.instance_variable_get("@#{name}")
-      else
-        super
-      end
-    end
     
   private
     def create(hash)
       hash.each do |key, value|
         self.instance_variable_set("@#{key.to_s}",  value)
+      end
+    end
+    
+    def method_missing(name, *args)
+      if self.instance_variables.include? :"@#{name}"
+        self.instance_variable_get("@#{name}")
+      else
+        super
       end
     end
   end

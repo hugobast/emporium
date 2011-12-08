@@ -1,3 +1,8 @@
+require 'hmac'
+require 'hmac-sha2'
+require 'base64'
+require 'nokogiri'
+
 module Emporium
   module Services
     class Amazon
