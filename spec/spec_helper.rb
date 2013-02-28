@@ -1,7 +1,13 @@
 require 'emporium'
 require 'yaml'
 
-CONFIG = YAML.load_file('./spec/config.yml')
+
+if File.exists?('./spec/config.yml')
+  CONFIG = YAML.load_file('./spec/config.yml')
+else
+  CONFIG = YAML.load_file('./spec/config_sample.yml')
+end
+
 AMAZON = CONFIG["amazon"]
 GOOGLE = CONFIG["google"]
 
