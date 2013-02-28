@@ -23,31 +23,43 @@ describe Emporium::Product do
   end
 
   describe "#fetch!" do
-    product = Emporium::Product.new("610839331574")
+    let(:product) { Emporium::Product.new("610839331574") }
 
     describe "using the amazon service" do
-      product.service = :amazon
+      before do
+        product.service = :amazon
+      end
 
       it "should fetch product information" do
-        lambda { product.fetch! }.should_not raise_error
+        VCR.use_cassette("fetch_amazon") do
+          lambda { product.fetch! }.should_not raise_error
+        end
       end
 
       it "should create attributes for the product" do
-        product.fetch!
-        product.brand.downcase.should match 'asus'
+        VCR.use_cassette("fetch_amazon") do
+          product.fetch!
+          product.brand.downcase.should match 'asus'
+        end
       end
     end
 
     describe "using the google service" do
-      product.service = :google
+      before do
+        product.service = :google
+      end
       
       it "should fetch product information" do
-        lambda { product.fetch! }.should_not raise_error
+        VCR.use_cassette("fetch_google") do
+          lambda { product.fetch! }.should_not raise_error
+        end
       end
 
       it "should create attributes for the product" do
-        product.fetch!
-        product.brand.downcase.should match 'asus'
+        VCR.use_cassette("fetch_google") do
+          product.fetch!
+          product.brand.downcase.should match 'asus'
+        end
       end
     end
 
@@ -77,8 +89,10 @@ describe Emporium::Services::Amazon do
 
   describe "#response" do
     it "should return a Hash" do
-      service = Emporium::Services::Amazon.new(code: "610839331574")
-      service.response.should be_an_instance_of Hash
+      VCR.use_cassette("fetch_amazon") do
+        service = Emporium::Services::Amazon.new(code: "610839331574")
+        service.response.should be_an_instance_of Hash
+      end
     end
 
     it "should raise an error if nothing is found" do
@@ -100,8 +114,10 @@ describe Emporium::Services::Google do
 
   describe "#response" do
     it "should return a Hash" do
-      service = Emporium::Services::Google.new(code: "610839331574")
-      service.response.should be_an_instance_of Hash
+      VCR.use_cassette("fetch_google") do
+        service = Emporium::Services::Google.new(code: "610839331574")
+        service.response.should be_an_instance_of Hash
+      end
     end
 
     it "should return an error if nothing is found" do
