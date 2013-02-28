@@ -1,5 +1,7 @@
 # Emporium
 
+[![Build Status](https://travis-ci.org/hugobast/emporium.png?branch=master)](https://travis-ci.org/hugobast/emporium) [![Code Climate](https://codeclimate.com/github/hugobast/emporium.png)](https://codeclimate.com/github/hugobast/emporium)
+
 Automatic identification and data capture library to read UPC/EAN and get as much information as it possibly can.
 
 
