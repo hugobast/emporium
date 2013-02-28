@@ -1,12 +1,7 @@
 require 'emporium'
 require 'yaml'
 
-<<<<<<< HEAD
 CONFIG = YAML.load_file('./spec/config.yml')
-AMAZON = CONFIG["amazon"]
-GOOGLE = CONFIG["google"]
-=======
-CONFIG = YAML.load_file('spec/config.yml')
 AMAZON = CONFIG["amazon"]
 GOOGLE = CONFIG["google"]
 
@@ -22,5 +17,3 @@ VCR.configure do |config|
     :match_requests_on => [:method, VCR.request_matchers.uri_without_params(:Timestamp, :Signature, :AssociateTag, :key)]
   }
 end
-
->>>>>>> 5c13f55... Removed amazon and google sensitive information
