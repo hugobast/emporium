@@ -1,6 +1,6 @@
 require 'emporium'
 require 'yaml'
-
+require 'vcr'
 
 if File.exists?('./spec/config.yml')
   CONFIG = YAML.load_file('./spec/config.yml')
