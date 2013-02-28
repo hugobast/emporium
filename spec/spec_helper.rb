@@ -5,7 +5,7 @@ require 'yaml'
 if File.exists?('./spec/config.yml')
   CONFIG = YAML.load_file('./spec/config.yml')
 else
-  CONFIG = YAML.load_file('./spec/config_sample.yml')
+  CONFIG = YAML.load_file('./spec/config.sample.yml')
 end
 
 AMAZON = CONFIG["amazon"]
