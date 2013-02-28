@@ -46,7 +46,7 @@ Give it a UPC to fetch a product object. The Code only takes UPC-A digits
  require 'emporium'
 
  product = Emporium::Product.new("066661234567")
- product.use :google # or :amazon
+ product.service = :google # or :amazon
  product.fetch!
  ```
 
