@@ -1,3 +1,3 @@
 module Emporium
-  VERSION = "0.0.4.alpha"
+  VERSION = "0.1.0"
 end
