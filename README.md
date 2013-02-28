@@ -16,20 +16,20 @@ Add to your Gemfile and run the `bundle` command to install it.
 
 ## Configuration
 
-### Amazon
+#### Amazon
 
  ```ruby
- service = Emporium::Services::Amazon.configuration do |config|
+ Emporium::Services::Amazon.configuration do |config|
    config.access_key = "access_key"
    config.associate_tag = "associate_tag"
    config.secret = "secret"
  end
  ```
 
-### Google
+#### Google
 
  ```ruby
- service = Emporium::Services::Google.configuration do |config|
+ Emporium::Services::Google.configuration do |config|
    config.access_key = "access_key"
    config.cme = "cse" # custom search engine
  end
@@ -44,7 +44,7 @@ Give it a UPC to fetch a product object. The Code only takes UPC-A digits
  require 'emporium'
 
  product = Emporium::Product.new("066661234567")
- product.use service
+ product.use :google # or :amazon
  product.fetch!
  ```
 
