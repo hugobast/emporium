@@ -1,0 +1,245 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=<access_key>&AssociateTag=<associate_tag>&IdType=UPC&ItemId=610839331574&Operation=ItemLookup&ResponseGroup=Medium&SearchIndex=All&Service=AWSECommerceService&Signature=rbCrXwMg7kubliOwRMtSVB6Zbh7dGFIlkqxY/fbt0D0=&Timestamp=2013-02-28T13:59:44-05:00&Version=2011-08-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Feb 2013 18:59:44 GMT
+      Server:
+      - Server
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Vary:
+      - Accept-Encoding,User-Agent
+      Nncoection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+        Name="UserAgent" Value="Ruby"></Header></HTTPHeaders><RequestId>5ac4a450-2f8b-4168-b542-c231c18fc66e</RequestId><Arguments><Argument
+        Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+        Name="Signature" Value="rbCrXwMg7kubliOwRMtSVB6Zbh7dGFIlkqxY/fbt0D0="></Argument><Argument
+        Name="AssociateTag" Value="<associate_tag>"></Argument><Argument Name="Version"
+        Value="2011-08-01"></Argument><Argument Name="ItemId" Value="610839331574"></Argument><Argument
+        Name="IdType" Value="UPC"></Argument><Argument Name="AWSAccessKeyId" Value="<access_key>"></Argument><Argument
+        Name="Timestamp" Value="2013-02-28T13:59:44-05:00"></Argument><Argument Name="ResponseGroup"
+        Value="Medium"></Argument><Argument Name="SearchIndex" Value="All"></Argument></Arguments><RequestProcessingTime>0.0412300000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>UPC</IdType><ItemId>610839331574</ItemId><ResponseGroup>Medium</ResponseGroup><SearchIndex>All</SearchIndex><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B00AHIHH7E</ASIN><DetailPageURL>http://www.amazon.com/Asus-23-6-LCD-Monitor/dp/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00AHIHH7E</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Asus-23-6-LCD-Monitor/dp/tech-data/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL.jpg</URL><Height
+        Units="pixels">400</Height><Width Units="pixels">400</Width></LargeImage><ImageSets><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL.jpg</URL><Height
+        Units="pixels">400</Height><Width Units="pixels">400</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Electronics</Binding><Brand>Asus</Brand><EAN>0610839331574</EAN><EANList><EANListElement>0610839331574</EANListElement></EANList><Label>Asus</Label><ListPrice><Amount>17900</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$179.00</FormattedPrice></ListPrice><Manufacturer>Asus</Manufacturer><MPN>610839331574</MPN><PackageQuantity>5</PackageQuantity><PartNumber>610839331574</PartNumber><ProductGroup>CE</ProductGroup><ProductTypeName>CONSUMER_ELECTRONICS</ProductTypeName><Publisher>Asus</Publisher><Studio>Asus</Studio><Title>23.6"
+        LCD Monitor</Title><UPC>610839331574</UPC><UPCList><UPCListElement>610839331574</UPCListElement></UPCList></ItemAttributes><OfferSummary><TotalNew>0</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>&lt;p&gt;23.6" LCD Monitor&lt;/p&gt;&lt;p&gt;&lt;p&gt;LED
+        Monitor - VE247H 23.6" - True to life Pictures Powered by LED&lt;br /&gt;&lt;br
+        /&gt;&lt;br /&gt;&lt;i&gt;***This item is expected to deliver in 4-10 business
+        days. Tracking information is usually sent within 3-5 business days from the
+        date of the purchase. This item does not ship to Alaska or Hawaii. The item
+        also does not ship to P.O. boxes or APOs.***&lt;/i&gt;&lt;/p&gt;</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews></Item><Item><ASIN>B004EFUOY4</ASIN><DetailPageURL>http://www.amazon.com/Asus-VE247H-24-Inch-Integrated-Speakers/dp/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004EFUOY4</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Asus-VE247H-24-Inch-Integrated-Speakers/dp/tech-data/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink></ItemLinks><SalesRank>149</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage><ImageSets><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">22</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">82</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">120</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL.jpg</URL><Height
+        Units="pixels">500</Height><Width Units="pixels">375</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML.jpg</URL><Height
+        Units="pixels">374</Height><Width Units="pixels">500</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Electronics</Binding><Brand>Asus</Brand><CatalogNumberList><CatalogNumberListElement>VE247H</CatalogNumberListElement><CatalogNumberListElement>MT-AS-VE247H</CatalogNumberListElement><CatalogNumberListElement>DHVE247H</CatalogNumberListElement></CatalogNumberList><EAN>0999994781708</EAN><EANList><EANListElement>0999994781708</EANListElement><EANListElement>0610839331574</EANListElement><EANListElement>0999994572054</EANListElement></EANList><Feature>23.6"
+        LED Monitor with 10,000,000:1 ASUS Smart Contrast Ratio</Feature><Feature>Full
+        HD with HDMI</Feature><Feature>2ms Response Time</Feature><Feature>ASUS SPLENDID
+        is The Secret for Vibrant Image Display</Feature><Feature>Mercury Free LED
+        backlit panel</Feature><IsAutographed>0</IsAutographed><IsMemorabilia>0</IsMemorabilia><ItemDimensions><Height
+        Units="hundredths-inches">0</Height><Length Units="hundredths-inches">0</Length><Weight
+        Units="hundredths-pounds">970</Weight><Width Units="hundredths-inches">0</Width></ItemDimensions><Label>Asus</Label><ListPrice><Amount>17900</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$179.00</FormattedPrice></ListPrice><Manufacturer>Asus</Manufacturer><Model>VE247H</Model><MPN>VE247H</MPN><NumberOfItems>1</NumberOfItems><PackageDimensions><Height
+        Units="hundredths-inches">610</Height><Length Units="hundredths-inches">2500</Length><Weight
+        Units="hundredths-pounds">1435</Weight><Width Units="hundredths-inches">1900</Width></PackageDimensions><PackageQuantity>1</PackageQuantity><PartNumber>VE247H</PartNumber><ProductGroup>Personal
+        Computer</ProductGroup><ProductTypeName>MONITOR</ProductTypeName><Publisher>Asus</Publisher><SKU>ITM-DSD-DHVE247H</SKU><Studio>Asus</Studio><Title>Asus
+        VE247H 24-Inch Full-HD LED Monitor with Integrated Speakers</Title><UPC>610839331574</UPC><UPCList><UPCListElement>610839331574</UPCListElement><UPCListElement>999994572054</UPCListElement><UPCListElement>999994781708</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>17399</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$173.99</FormattedPrice></LowestNewPrice><LowestUsedPrice><Amount>12000</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$120.00</FormattedPrice></LowestUsedPrice><TotalNew>33</TotalNew><TotalUsed>6</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>VE247H LED - 23.6" 1920x1080</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews></Item></Items></ItemLookupResponse>
+    http_version: 
+  recorded_at: Thu, 28 Feb 2013 18:59:44 GMT
+- request:
+    method: get
+    uri: http://webservices.amazon.com/onca/xml?AWSAccessKeyId=<access_key>&AssociateTag=<associate_tag>&IdType=UPC&ItemId=610839331574&Operation=ItemLookup&ResponseGroup=Medium&SearchIndex=All&Service=AWSECommerceService&Signature=rbCrXwMg7kubliOwRMtSVB6Zbh7dGFIlkqxY/fbt0D0=&Timestamp=2013-02-28T13:59:44-05:00&Version=2011-08-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 28 Feb 2013 18:59:44 GMT
+      Server:
+      - Server
+      Content-Type:
+      - text/xml;charset=UTF-8
+      Vary:
+      - Accept-Encoding,User-Agent
+      Nncoection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: US-ASCII
+      string: <?xml version="1.0" ?><ItemLookupResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2011-08-01"><OperationRequest><HTTPHeaders><Header
+        Name="UserAgent" Value="Ruby"></Header></HTTPHeaders><RequestId>c59495ba-f707-4c92-9dd8-a26ce64d96b2</RequestId><Arguments><Argument
+        Name="Operation" Value="ItemLookup"></Argument><Argument Name="Service" Value="AWSECommerceService"></Argument><Argument
+        Name="Signature" Value="rbCrXwMg7kubliOwRMtSVB6Zbh7dGFIlkqxY/fbt0D0="></Argument><Argument
+        Name="AssociateTag" Value="<associate_tag>"></Argument><Argument Name="Version"
+        Value="2011-08-01"></Argument><Argument Name="ItemId" Value="610839331574"></Argument><Argument
+        Name="IdType" Value="UPC"></Argument><Argument Name="AWSAccessKeyId" Value="<access_key>"></Argument><Argument
+        Name="Timestamp" Value="2013-02-28T13:59:44-05:00"></Argument><Argument Name="ResponseGroup"
+        Value="Medium"></Argument><Argument Name="SearchIndex" Value="All"></Argument></Arguments><RequestProcessingTime>0.0303620000000000</RequestProcessingTime></OperationRequest><Items><Request><IsValid>True</IsValid><ItemLookupRequest><IdType>UPC</IdType><ItemId>610839331574</ItemId><ResponseGroup>Medium</ResponseGroup><SearchIndex>All</SearchIndex><VariationPage>All</VariationPage></ItemLookupRequest></Request><Item><ASIN>B00AHIHH7E</ASIN><DetailPageURL>http://www.amazon.com/Asus-23-6-LCD-Monitor/dp/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00AHIHH7E</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Asus-23-6-LCD-Monitor/dp/tech-data/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00AHIHH7E%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B00AHIHH7E%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00AHIHH7E</URL></ItemLink></ItemLinks><SmallImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL.jpg</URL><Height
+        Units="pixels">400</Height><Width Units="pixels">400</Width></LargeImage><ImageSets><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/410NYTguBOL.jpg</URL><Height
+        Units="pixels">400</Height><Width Units="pixels">400</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Electronics</Binding><Brand>Asus</Brand><EAN>0610839331574</EAN><EANList><EANListElement>0610839331574</EANListElement></EANList><Label>Asus</Label><ListPrice><Amount>17900</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$179.00</FormattedPrice></ListPrice><Manufacturer>Asus</Manufacturer><MPN>610839331574</MPN><PackageQuantity>5</PackageQuantity><PartNumber>610839331574</PartNumber><ProductGroup>CE</ProductGroup><ProductTypeName>CONSUMER_ELECTRONICS</ProductTypeName><Publisher>Asus</Publisher><Studio>Asus</Studio><Title>23.6"
+        LCD Monitor</Title><UPC>610839331574</UPC><UPCList><UPCListElement>610839331574</UPCListElement></UPCList></ItemAttributes><OfferSummary><TotalNew>0</TotalNew><TotalUsed>0</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>&lt;p&gt;23.6" LCD Monitor&lt;/p&gt;&lt;p&gt;&lt;p&gt;LED
+        Monitor - VE247H 23.6" - True to life Pictures Powered by LED&lt;br /&gt;&lt;br
+        /&gt;&lt;br /&gt;&lt;i&gt;***This item is expected to deliver in 4-10 business
+        days. Tracking information is usually sent within 3-5 business days from the
+        date of the purchase. This item does not ship to Alaska or Hawaii. The item
+        also does not ship to P.O. boxes or APOs.***&lt;/i&gt;&lt;/p&gt;</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews></Item><Item><ASIN>B004EFUOY4</ASIN><DetailPageURL>http://www.amazon.com/Asus-VE247H-24-Inch-Integrated-Speakers/dp/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB004EFUOY4</DetailPageURL><ItemLinks><ItemLink><Description>Technical
+        Details</Description><URL>http://www.amazon.com/Asus-VE247H-24-Inch-Integrated-Speakers/dp/tech-data/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Baby Registry</Description><URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Wedding Registry</Description><URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Add
+        To Wishlist</Description><URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB004EFUOY4%26SubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>Tell
+        A Friend</Description><URL>http://www.amazon.com/gp/pdp/taf/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>All
+        Customer Reviews</Description><URL>http://www.amazon.com/review/product/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink><ItemLink><Description>All
+        Offers</Description><URL>http://www.amazon.com/gp/offer-listing/B004EFUOY4%3FSubscriptionId%3D<access_key>%26tag%3D<associate_tag>%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB004EFUOY4</URL></ItemLink></ItemLinks><SalesRank>149</SalesRank><SmallImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage><ImageSets><ImageSet
+        Category="primary"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/412-mDHUMvL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/41-ZYL1LcdL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/41ABbKFchBL.jpg</URL><Height
+        Units="pixels">375</Height><Width Units="pixels">500</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL30_.jpg</URL><Height
+        Units="pixels">30</Height><Width Units="pixels">22</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL75_.jpg</URL><Height
+        Units="pixels">75</Height><Width Units="pixels">56</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL110_.jpg</URL><Height
+        Units="pixels">110</Height><Width Units="pixels">82</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL._SL160_.jpg</URL><Height
+        Units="pixels">160</Height><Width Units="pixels">120</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/31bO7MgJBSL.jpg</URL><Height
+        Units="pixels">500</Height><Width Units="pixels">375</Width></LargeImage></ImageSet><ImageSet
+        Category="variant"><SwatchImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL30_.jpg</URL><Height
+        Units="pixels">22</Height><Width Units="pixels">30</Width></SwatchImage><SmallImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></SmallImage><ThumbnailImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL75_.jpg</URL><Height
+        Units="pixels">56</Height><Width Units="pixels">75</Width></ThumbnailImage><TinyImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL110_.jpg</URL><Height
+        Units="pixels">82</Height><Width Units="pixels">110</Width></TinyImage><MediumImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML._SL160_.jpg</URL><Height
+        Units="pixels">120</Height><Width Units="pixels">160</Width></MediumImage><LargeImage><URL>http://ecx.images-amazon.com/images/I/31aYFwVPOML.jpg</URL><Height
+        Units="pixels">374</Height><Width Units="pixels">500</Width></LargeImage></ImageSet></ImageSets><ItemAttributes><Binding>Electronics</Binding><Brand>Asus</Brand><CatalogNumberList><CatalogNumberListElement>VE247H</CatalogNumberListElement><CatalogNumberListElement>MT-AS-VE247H</CatalogNumberListElement><CatalogNumberListElement>DHVE247H</CatalogNumberListElement></CatalogNumberList><EAN>0999994781708</EAN><EANList><EANListElement>0999994781708</EANListElement><EANListElement>0610839331574</EANListElement><EANListElement>0999994572054</EANListElement></EANList><Feature>23.6"
+        LED Monitor with 10,000,000:1 ASUS Smart Contrast Ratio</Feature><Feature>Full
+        HD with HDMI</Feature><Feature>2ms Response Time</Feature><Feature>ASUS SPLENDID
+        is The Secret for Vibrant Image Display</Feature><Feature>Mercury Free LED
+        backlit panel</Feature><IsAutographed>0</IsAutographed><IsMemorabilia>0</IsMemorabilia><ItemDimensions><Height
+        Units="hundredths-inches">0</Height><Length Units="hundredths-inches">0</Length><Weight
+        Units="hundredths-pounds">970</Weight><Width Units="hundredths-inches">0</Width></ItemDimensions><Label>Asus</Label><ListPrice><Amount>17900</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$179.00</FormattedPrice></ListPrice><Manufacturer>Asus</Manufacturer><Model>VE247H</Model><MPN>VE247H</MPN><NumberOfItems>1</NumberOfItems><PackageDimensions><Height
+        Units="hundredths-inches">610</Height><Length Units="hundredths-inches">2500</Length><Weight
+        Units="hundredths-pounds">1435</Weight><Width Units="hundredths-inches">1900</Width></PackageDimensions><PackageQuantity>1</PackageQuantity><PartNumber>VE247H</PartNumber><ProductGroup>Personal
+        Computer</ProductGroup><ProductTypeName>MONITOR</ProductTypeName><Publisher>Asus</Publisher><SKU>ITM-DSD-DHVE247H</SKU><Studio>Asus</Studio><Title>Asus
+        VE247H 24-Inch Full-HD LED Monitor with Integrated Speakers</Title><UPC>610839331574</UPC><UPCList><UPCListElement>610839331574</UPCListElement><UPCListElement>999994572054</UPCListElement><UPCListElement>999994781708</UPCListElement></UPCList></ItemAttributes><OfferSummary><LowestNewPrice><Amount>17399</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$173.99</FormattedPrice></LowestNewPrice><LowestUsedPrice><Amount>12000</Amount><CurrencyCode>USD</CurrencyCode><FormattedPrice>$120.00</FormattedPrice></LowestUsedPrice><TotalNew>33</TotalNew><TotalUsed>6</TotalUsed><TotalCollectible>0</TotalCollectible><TotalRefurbished>0</TotalRefurbished></OfferSummary><EditorialReviews><EditorialReview><Source>Product
+        Description</Source><Content>VE247H LED - 23.6" 1920x1080</Content><IsLinkSuppressed>0</IsLinkSuppressed></EditorialReview></EditorialReviews></Item></Items></ItemLookupResponse>
+    http_version: 
+  recorded_at: Thu, 28 Feb 2013 18:59:44 GMT
+recorded_with: VCR 2.4.0

@@ -1,0 +1,8 @@
+amazon:
+  secret: "<secret>" 
+  access_key: "<access_key>" 
+  associate_tag: "<associate_tag>" 
+
+google:
+  access_key: "AIzaSyCsQI5c1TfsJa0dFL5zG9WcvldPcufSi68"
+  cse: "013820864268416164840:fvkrurndekm"
